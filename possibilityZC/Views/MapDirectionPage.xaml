@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:possibilityZC.ViewModels"
+             xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:controls="clr-namespace:possibilityZC.Controls"
+             x:Class="possibilityZC.Views.MapDirectionPage"
+             NavigationPage.BackButtonTitle=""
+             NavigationPage.HasNavigationBar="True">
+    <ContentPage.BindingContext>
+        <vm:MapDirectionViewModel/>
+    </ContentPage.BindingContext>
+    <Grid>
+        <maps:Map x:Name="map"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"/>
+
+        <StackLayout BackgroundColor="#eee"
+                            Orientation="Vertical">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Mc'donald's"
+                                TextColor="#f35e20" />
+                <Label Text="Martin Luther King Dr"
+                                HorizontalOptions="EndAndExpand"
+                                TextColor="#503026" />
+            </StackLayout>
+        </StackLayout>
+
+        <Button Text="Stop"
+                   Margin="40"
+                   Clicked="Handle_Stop_Clicked"
+                   Command="{Binding StopRouteCommand}"
+                   IsVisible="false"
+                   x:Name="stopRouteButton"
+                   BackgroundColor="Red"
+                   TextColor="White"
+                   FontSize="17"
+                   VerticalOptions="EndAndExpand"
+                   HorizontalOptions="FillAndExpand"/>
+    </Grid>
+</ContentPage>

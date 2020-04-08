@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Accordion;assembly=Syncfusion.Expander.XForms"
+             xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             mc:Ignorable="d"
+             x:Class="possibilityZC.Views.RestaurantDetailPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <FlexLayout
+            AlignItems="Start"
+            AlignContent="Start"                   
+            Wrap="Wrap">
+
+                <Image Source="possibility.png" FlexLayout.Basis="100%" />
+
+                <Label  x:Name="lblName" Text="{Binding Restaurant.Name}" HorizontalTextAlignment="Center" TextColor="#01487E"
+                   FontAttributes="Bold" FontSize="Large" Margin="10, 10" />
+
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+
+                <Label Text="Location and Category" FontAttributes="Bold" FontSize="Medium" TextColor="#EE3F60"
+                   Margin="10,10" HorizontalOptions="FillAndExpand" />
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+                <Label x:Name="lblCategory" Text="{Binding Restaurant.Category}" Margin="10,10" FontSize="Small" />
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+                <Label x:Name="lblAddress" Text="{Binding Restaurant.Address}" Margin="10,10" FontSize="Small" IsVisible="False" />
+                <Label x:Name="lblCity" Text="{Binding Restaurant.City}" Margin="10,10" FontSize="Small"  IsVisible="False" />
+                <Label x:Name="lblState" Text="{Binding Restaurant.State}" Margin="10,10" FontSize="Small"  IsVisible="False" />
+                <Label x:Name="lblLat" Text="{Binding Restaurant.Lat}" Margin="10,10" FontSize="Small" IsVisible="False" />
+                <Label x:Name="lblLong" Text="{Binding Restaurant.Long}" Margin="10,10" FontSize="Small" IsVisible="False" />
+                
+                <Label x:Name="lblFullAddress" Margin="10,10" FontSize="Small" />
+                
+                
+
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+                <Label Text="Dietary Options" FontAttributes="Bold" FontSize="Medium" TextColor="#EE3F60"
+                   Margin="10,10" HorizontalOptions="FillAndExpand" />
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+                <Label Text="{Binding Restaurant.Diet}" Margin="10,10" FontSize="Small" />
+
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+                
+                <Label Text="Description" FontAttributes="Bold" FontSize="Medium" TextColor="#EE3F60" 
+                   Margin="10,10" HorizontalOptions="FillAndExpand" />
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+                <Label Text="{Binding Restaurant.Description}" Margin="10,10" FontSize="Small" />
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+                
+                <Label Text="Menu" FontAttributes="Bold" FontSize="Medium" TextColor="#EE3F60" 
+                   Margin="10,10" HorizontalOptions="FillAndExpand" />
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+                <Label Text="{Binding Restaurant.menus[0].item1}" Margin="10,10" FontSize="Small" />
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+                <Label Text="{Binding Restaurant.menus[0].item2}" Margin="10,10" FontSize="Small" />
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+                <Label Text="{Binding Restaurant.menus[0].item3}" Margin="10,10" FontSize="Small" />
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+                <Label Text="{Binding Restaurant.menus[0].item4}" Margin="10,10" FontSize="Small" />
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+                <Label Text="{Binding Restaurant.menus[0].item5}" Margin="10,10" FontSize="Small" />
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+                <Label Text="{Binding Restaurant.menus[0].item6}" Margin="10,10" FontSize="Small" />
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+                <Label Text="{Binding Restaurant.menus[0].item7}" Margin="10,10" FontSize="Small" />
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+                <Label Text="{Binding Restaurant.menus[0].item8}" Margin="10,10" FontSize="Small" />
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+                <Label Text="{Binding Restaurant.menus[0].item9}" Margin="10,10" FontSize="Small" />
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+                <Label Text="{Binding Restaurant.menus[0].item10}" Margin="10,10" FontSize="Small" />
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+                <Label Text="{Binding Restaurant.menus[0].item11}" Margin="10,10" FontSize="Small" />
+
+            </FlexLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+    <!--<ContentPage.Content>
+        <TableView Intent="Form">
+            <TableRoot>
+                <TableSection Title="Info">
+                    <ViewCell>
+                        <StackLayout HeightRequest="500">
+                            <Label x:Name="lblName" Text="{Binding Restaurant.Name}" />
+                            <Label x:Name="lblCategory" Text="{Binding Restaurant.Category}" />
+                            <Label x:Name="lblAddress" Text="{Binding Restaurant.Address}" />
+                            <Label x:Name="lblCity" Text="{Binding Restaurant.City}" />
+                            <Label x:Name="lblState" Text="{Binding Restaurant.State}" />
+                            <Label x:Name="lblLat" Text="{Binding Restaurant.Lat}" />
+                            <Label x:Name="lblLong" Text="{Binding Restaurant.Long}" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+                <TableSection Title="Details">
+                    <ViewCell>
+                        <StackLayout HeightRequest="200">
+                            <Label x:Name="lblDesp" Text="{Binding Restaurant.Description}" />
+
+                            
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+                <TableSection Title="Open Map">
+                    <ViewCell>
+                        <Button Text="Get Directions"
+                               Margin="40"
+                               IsVisible="{Binding IsRouteNotRunning}"
+                               Clicked="getDirections"
+                               x:Name="chooseLocationButton"
+                               TextColor="Black"
+                               FontSize="17"
+                               VerticalOptions="EndAndExpand"
+                               HorizontalOptions="FillAndExpand"/>
+                    </ViewCell>
+                </TableSection>
+                <TableSection Title="View Menu">
+                    <ViewCell>
+                        <Label x:Name="lblMenu" Text="{Binding Restaurant.menus[0].item1}" />
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+        
+    </ContentPage.Content>-->
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Get Directions" Clicked="getDirections" />
+    </ContentPage.ToolbarItems>
+</ContentPage>

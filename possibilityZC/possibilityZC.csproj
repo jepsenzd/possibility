@@ -1,0 +1,109 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+<ItemGroup>
+<PackageReference Include="Auth0.OidcClient.Core" Version="3.1.2" />
+<PackageReference Include="Microsoft.Azure.DocumentDB" Version="2.10.1" />
+<PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="2.10.1" />
+<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+<PackageReference Include="Syncfusion.Xamarin.SfBadgeView" Version="17.4.0.46" />
+<PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="17.4.0.46" />
+<PackageReference Include="Syncfusion.Xamarin.SfRotator" Version="17.4.0.46" />
+<PackageReference Include="Xam.Plugin.Geolocator" Version="4.5.0.6" />
+<PackageReference Include="Xam.Plugin.Iconize" Version="3.5.0.129" />
+<PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
+<PackageReference Include="Xamarin.Auth" Version="1.7.0" />
+<PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+<PackageReference Include="Xamarin.Forms" Version="4.4.0.991757" />
+<PackageReference Include="Syncfusion.Xamarin.Core" Version="17.4.0.46" />
+<PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="17.4.0.46" />
+<PackageReference Include="Syncfusion.Xamarin.Core" Version="17.4.0.46" />
+<PackageReference Include="Syncfusion.Xamarin.Buttons" Version="17.4.0.46" />
+<PackageReference Include="Syncfusion.Xamarin.SfRating" Version="17.4.0.46" />
+<PackageReference Include="Syncfusion.Xamarin.SfNavigationDrawer" Version="17.4.0.46" />
+<PackageReference Include="Syncfusion.Xamarin.SfMaps" Version="17.4.0.46" />
+<PackageReference Include="Syncfusion.Xamarin.SfListView" Version="17.4.0.46" />
+<PackageReference Include="Syncfusion.Xamarin.Cards" Version="17.4.0.46" />
+<PackageReference Include="Syncfusion.Xamarin.Cards" Version="17.4.0.46" />
+<PackageReference Include="Syncfusion.Xamarin.Buttons" Version="17.4.0.46" />
+<PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="17.4.0.46" />
+<PackageReference Include="Syncfusion.Xamarin.SfAutoComplete" Version="17.4.0.46" />
+<PackageReference Include="Syncfusion.Xamarin.Expander " Version="17.4.0.46" />
+<PackageReference Include="Xamarin.Forms.GoogleMaps" Version="3.0.4" />
+</ItemGroup>
+
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Themes\LightTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ContactUs\ContactUsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ContactUs\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MapDirectionPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MasterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Navigation\NavigationListCardPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Navigation\RecipeListCardPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Navigation\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Profile\ProfilePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Profile\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\RecipeDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\RecipeTabbedPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\RestaurantDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\RestaurantsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SavedRecipesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings\SettingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Templates\NavigationListTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Templates\RecipeListTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Templates\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="possibilityZC.Views.RecipeDetailPage">
+    <ContentPage.Content>
+
+        <TableView Intent="Form" HasUnevenRows="true">
+            <TableRoot>
+                <TableSection Title="Basic Info">
+                    <EntryCell Label="Name" Text="{Binding Recipe.Name}"/>
+                    <EntryCell Label="Diet Options" Text="{Binding Recipe.Category}" IsEnabled="{Binding IsNew}" />
+                </TableSection>
+                <TableSection Title="Details">
+                    <ViewCell>
+                        <StackLayout>
+                            <Editor Text="{Binding Recipe.Description}" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+                <TableSection Title="Ingredients">
+                    <ViewCell>
+                        <StackLayout>
+                            <Editor Text="{Binding Recipe.Ingredient1}"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout >
+                            <Editor Text="{Binding Recipe.Ingredient2}"   />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout >
+                            <Editor Text="{Binding Recipe.Ingredient3}"   />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout >
+                            <Editor Text="{Binding Recipe.Ingredient4}"   />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout >
+                            <Editor Text="{Binding Recipe.Ingredient5}"   />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout >
+                            <Editor Text="{Binding Recipe.Ingredient6}"   />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout >
+                            <Editor Text="{Binding Recipe.Ingredient7}"   />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout >
+                            <Editor Text="{Binding Recipe.Ingredient8}"   />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout >
+                            <Editor Text="{Binding Recipe.Ingredient9}"   />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout >
+                            <Editor Text="{Binding Recipe.Ingredient10}"   />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout >
+                            <Editor Text="{Binding Recipe.Ingredient11}"   />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout >
+                            <Editor Text="{Binding Recipe.Ingredient12}"   />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+                <TableSection Title="Directions">
+                    <ViewCell>
+                        <StackLayout >
+                            <Editor Text="{Binding Recipe.Directions}"   />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Command="{Binding SaveCommand}" />
+        <ToolbarItem Text="Cancel" Clicked="Handle_CancelClicked" />
+    </ContentPage.ToolbarItems>
+</ContentPage>
